@@ -17,6 +17,7 @@
 
 ### **3. Reducers Carry out the changes to the state
  Are JS functions: Define how the current state and action are converted to a new state</br>
+ 
        const reducer =  (state = initialState , action) => {
          switch(action.type){
            case 'songs/addSong': {
