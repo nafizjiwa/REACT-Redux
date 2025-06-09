@@ -1,10 +1,8 @@
 # REACT-Redux
 
 ### **1. State Defined
-
       const initialState = [ 'Take Five', 'Claire de Lune', 'Respect' ];
 ### **2. 'ACTIONS' are a request to change the state 
-
       const addNewSong = {
          type: 'songs/addSong',
          payload: 'Halo'
@@ -18,8 +16,8 @@
        }
 
 ### **3. Reducers Carry out the changes to the state
-          Are JS functions: Define how the current state and action are</br>
-            converted to a new state</br>
+ Are JS functions: Define how the current state and action are</br>
+ converted to a new state</br>
             
        const reducer =  (state = initialState , action) => {
          switch(action.type){
