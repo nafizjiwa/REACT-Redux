@@ -48,16 +48,18 @@ Pure functions always have the same outputs given the same inputs.</br>
             -------------------------------------------------------------
             import React from 'react';
             //Modify mutable function to immutable
-            export const removeItemAtIndex = (list, index) => {
+            // export const removeItemAtIndex = (list, index) => {
                   //  list.splice(index, 1);   //MUTABLE
-                  //  return list;
+                  //  return list; 
+            // };
+            export const removeItemAtIndex = (list, index) => {
               return [
                  ...list.slice(0, index),          //IMMUTABLE
                 ...list.slice(index + 1, list.length)
               ]; 
             };
             --------------------------------------------------------------
-            //Modify impure function
+            //Modify impure function to Pure Function
             // export const generateUniqueId = () => {
             //         const timestamp = Date.now();
             //         const random = Math.floor(Math.random() * 1000);
@@ -65,12 +67,11 @@ Pure functions always have the same outputs given the same inputs.</br>
             // };
             
             export const generateUniqueId = (timestamp, random) => {
-              return timestamp + random;
+              return timestamp + random;      //PURE FUNCTION
             };
-            
             const App = () => {
-              //Make your function calls here
               const result = removeItemAtIndex(['a', 'b', 'c', 'd'], 1);
+              //Make function calls here
               const timestamp = Date.now();
               const random = Math.floor(Math.random() * 1000);
               
