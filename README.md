@@ -89,3 +89,13 @@ Pure functions always have the same outputs given the same inputs.</br>
             };
             
             export default App;
+### **4. STORE
+
+      - Is a container for the state (the single source of truth). </br>
+      - Facilitates the dispatching of actions, and then triggering the reducer.</br>
+DESCRIBE THE ONE-WAY DATA FLOW BETWEEN STORE AND STATE, ACTIONS, AND REDUCERS
+`1. The STORE initializes the state with a default value.`
+`2. The VIEW displays that state to the user.`
+`3. When a USER INTERACTS WITH THE VIEW, such as clicking a button, an ACTION DISPATCHED to the store.`
+`4 The STORE'S REDUCER combines the dispatched action and the current state to DETERMINE THE NEXT STATE.`
+`5. The VIEW IS UPDATED to display the new state.`
