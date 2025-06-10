@@ -43,18 +43,18 @@ Pure functions always have the same outputs given the same inputs.</br>
          payload: 'addtional info about how to perform the action' // What are we doing it to 
        }
 
-
+            -------------------------------------------------------------
             import React from 'react';
-            //Modify mutable function
+            //Modify mutable function to immutable
             export const removeItemAtIndex = (list, index) => {
-                  //  list.splice(index, 1);
+                  //  list.splice(index, 1);   //MUTABLE
                   //  return list;
               return [
-                 ...list.slice(0, index),
+                 ...list.slice(0, index),          //IMMUTABLE
                 ...list.slice(index + 1, list.length)
               ]; 
             };
-            
+            --------------------------------------------------------------
             //Modify impure function
             // export const generateUniqueId = () => {
             //   const timestamp = Date.now();
@@ -73,7 +73,7 @@ Pure functions always have the same outputs given the same inputs.</br>
               const random = Math.floor(Math.random() * 1000);
               
               const uniqueId = generateUniqueId(timestamp, random);
-              
+              --------------------------------------------------------------
               //Don't touch the content below this!
               return (
                 <div>
