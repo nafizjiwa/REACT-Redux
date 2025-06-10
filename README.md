@@ -43,6 +43,8 @@ Pure functions always have the same outputs given the same inputs.</br>
          payload: 'addtional info about how to perform the action' // What are we doing it to 
        }   
  ### Immutable Updates and Pure Functions
+ #### Immutable - no changes to original argument
+ #### Pure Functions - always the same outputs given the same inputs
             -------------------------------------------------------------
             import React from 'react';
             //Modify mutable function to immutable
@@ -57,8 +59,8 @@ Pure functions always have the same outputs given the same inputs.</br>
             --------------------------------------------------------------
             //Modify impure function
             // export const generateUniqueId = () => {
-            //   const timestamp = Date.now();
-            //   const random = Math.floor(Math.random() * 1000);
+            //         const timestamp = Date.now();
+            //         const random = Math.floor(Math.random() * 1000);
             //   return timestamp + random;
             // };
             
