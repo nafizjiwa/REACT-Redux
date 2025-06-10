@@ -65,7 +65,7 @@ Pure functions always have the same outputs given the same inputs.</br>
             //         const random = Math.floor(Math.random() * 1000);
             //   return timestamp + random;
             // };
-            
+            //Make function Pure by removing function outside
             export const generateUniqueId = (timestamp, random) => {
               return timestamp + random;      //PURE FUNCTION
             };
@@ -74,7 +74,7 @@ Pure functions always have the same outputs given the same inputs.</br>
               //Make function calls here
               const timestamp = Date.now();
               const random = Math.floor(Math.random() * 1000);
-              
+              //Then call pure funciton hence output same everytime input is same
               const uniqueId = generateUniqueId(timestamp, random);
             -----------------------------------------------------------------
               //Don't touch the content below this!
