@@ -36,13 +36,13 @@ Pure functions always have the same outputs given the same inputs.</br>
  `Redux manages and upates state with redux Actions`</br>
  `Actions in Redux are JS Objects`</br>
  'Actions describe an occuring event and provide info about what needs to be updated in state'</br>
- ### Actions Syntax
+ ### **Actions Syntax
  
      const actionIsAnObject = {
          type: 'actionTypeAsAString', //What are we doing -type of action
          payload: 'addtional info about how to perform the action' // What are we doing it to 
        }   
- ### Immutable Updates and Pure Functions
+ ### **Immutable Updates and Pure Functions
  #### Immutable - no changes to original argument
  #### Pure Functions - always the same outputs given the same inputs
             -------------------------------------------------------------
