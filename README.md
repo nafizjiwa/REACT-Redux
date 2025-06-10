@@ -42,7 +42,8 @@ Pure functions always have the same outputs given the same inputs.</br>
          type: 'actionTypeAsAString', //What are we doing -type of action
          payload: 'addtional info about how to perform the action' // What are we doing it to 
        }
-
+       
+ #### Immutable Updates and Pure Functions
             -------------------------------------------------------------
             import React from 'react';
             //Modify mutable function to immutable
