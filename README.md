@@ -1,4 +1,5 @@
 # REACT-Redux
+- Library to manage and update state.
 
 ### **1. State Defined
       const initialState = [ 'Take Five', 'Claire de Lune', 'Respect' ];
@@ -89,13 +90,14 @@ Pure functions always have the same outputs given the same inputs.</br>
             };
             
             export default App;
-### **4. STORE
+### **4. STORE (single source of truth)
 
-      - Is a container for the state (the single source of truth). </br>
-      - Facilitates the dispatching of actions, and then triggering the reducer.</br>
+      A container for state, it provides a way to dispatch actions, and it calls the reducer when actions are dispatched.</br>
+      
 #### DESCRIBE THE ONE-WAY DATA FLOW BETWEEN STORE AND STATE, ACTIONS, AND REDUCERS
+      = from state to view to action back to state
 `1. The STORE initializes the state with a default value.`</br>
 `2. The VIEW displays that state to the user.`</br>
 `3. When a USER INTERACTS WITH THE VIEW, such as clicking a button, an ACTION DISPATCHED to the store.`</br>
-`4 The STORE'S REDUCER combines the dispatched action and the current state to DETERMINE THE NEXT STATE.`</br>
+`4. The STORE'S REDUCER combines the dispatched action and the current state to DETERMINE THE NEXT STATE.`</br>
 `5. The VIEW IS UPDATED to display the new state.`</br>
