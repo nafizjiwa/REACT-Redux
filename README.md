@@ -73,7 +73,7 @@ Pure functions always have the same outputs given the same inputs.</br>
               const random = Math.floor(Math.random() * 1000);
               
               const uniqueId = generateUniqueId(timestamp, random);
-              --------------------------------------------------------------
+            -----------------------------------------------------------------
               //Don't touch the content below this!
               return (
                 <div>
