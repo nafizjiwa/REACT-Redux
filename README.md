@@ -1,9 +1,13 @@
 # REACT-Redux
 - Library to manage and update state.
+- The state object (initialWagonState) and the state management logic (stateReducer) are the model.
+- The model is updated through actions that trigger the reducer function and then change state
+- Dispatch an action --> Describes what to change
+- function that takes state and action as arguments, and returns the next state of the app
 
 ### **1. STATE Defined
       const initialState = [ 'Take Five', 'Claire de Lune', 'Respect' ];
-### **2. 'ACTIONS' are a request to change the state 
+### **2. 'ACTIONS' ARE JS OBJECTS WHICH TRIGGER A CHANGE IN STATE 
       const addNewSong = {
          type: 'songs/addSong',
          payload: 'Halo'
@@ -17,7 +21,8 @@
        }
 
 ### **3. REDUCERS Carry out the changes to the state
- Are JS functions: Define how the current state and action are converted to a new state</br>
+ - JS functions that take state and action as arguments, and return the next state of the app</br>
+ - Defines how to convert to a new state</br>
  
        const reducer =  (state = initialState , action) => {
          switch(action.type){
