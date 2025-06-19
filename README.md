@@ -3,7 +3,6 @@
 - The state object (initialState) and the state management logic (stateReducer)
 - Actions trigger the reducer function and then change state
 - A dispatched Action --> Describes what to change
-- Reducers are functions they accept current state & action object and return the next state
 
 ### **1. STATE Defined
       const initialState = [ 'Take Five', 'Claire de Lune', 'Respect' ];
@@ -21,8 +20,8 @@
        }
 
 ### **3. REDUCERS Carry out the changes to the state
- - JS functions that take state and action as arguments, and return the next state of the app</br>
- - Defines how to convert to a new state</br>
+ - JS functions: They accept state and action object as arguments, and return the next state
+ - They define how to convert to a new state</br>
  
        const reducer =  (state = initialState , action) => {
          switch(action.type){
@@ -37,16 +36,15 @@
            }
          }
        }
-Reducer functions make immutable update to arguments by creating a copy and modifing that copy.</br>
+Reducer functions make immutable changes to state by creating a copy and modifing that copy.</br>
 Pure functions always have the same outputs given the same inputs.</br>
  `Redux manages and upates state with redux Actions`</br>
- `Actions in Redux are JS Objects`</br>
  'Actions describe an occuring event and provide info about what needs to be updated in state'</br>
  ### **Actions Syntax
  
      const actionIsAnObject = {
          type: 'actionTypeAsAString', //What are we doing -type of action
-         payload: 'addtional info about how to perform the action' // What are we doing it to 
+         payload: 'addtional info about how to perform the action' // How are we doing it
        }   
  ### **Immutable Updates and Pure Functions
  #### Immutable - No changes to original argument
