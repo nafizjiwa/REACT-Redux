@@ -1,15 +1,15 @@
 # REACT-Redux
 - Library to manage and update state through the STORE OBJECT.
 - The state object (initialState) and the state management logic (stateReducer)
-- The model is updated through actions that trigger the reducer function and then change state
-- Dispatch an action --> Describes what to change
-- Actions are functions take in current state and action return the next state of the app
+- Actions trigger the reducer function and then change state
+- A dispatched Action --> Describes what to change
+- Reducers are functions they accept current state & action object and return the next state
 
 ### **1. STATE Defined
       const initialState = [ 'Take Five', 'Claire de Lune', 'Respect' ];
-### **2. 'ACTIONS' ARE JS OBJECTS WHICH TRIGGER A CHANGE IN STATE 
+### **2. 'ACTIONS' ARE JS OBJECTS they TRIGGER A STATE CHANGE 
       const addNewSong = {
-         type: 'songs/addSong',
+         type: 'songs/addSong',            MUST HAVE TYPE PROP
          payload: 'Halo'
        };
        const removeSong = {
@@ -49,8 +49,8 @@ Pure functions always have the same outputs given the same inputs.</br>
          payload: 'addtional info about how to perform the action' // What are we doing it to 
        }   
  ### **Immutable Updates and Pure Functions
- #### Immutable - no changes to original argument
- #### Pure Functions - always the same outputs given the same inputs
+ #### Immutable - No changes to original argument
+ #### Pure Functions - Return the same outputs given the same inputs
             -------------------------------------------------------------
             import React from 'react';
             //Modify mutable function to immutable
@@ -112,3 +112,16 @@ User interacts with UI
 actions are dispatched in response to a user interaction like a click.
 the store runs the reducer function to calculate a new state.
 the UI reads the new state to display the new values.
+
+|REVIEW|NOTES|
+|----:|:---|
+|REDUX Store [An Object]|Manages State|
+|It recieves an Action Objects|--> Executes state changes|
+|The state changes based on: |Action Type|
+|When change occurs the store calls listener function||
+|To create a STORE object Redux uses:| createStore( )|
+|createStore(accepts reducer function)| --> Store Object|
+|Store Object has 3 methods||
+|store.getState( )|retrieves current state|
+|store.dipatch(action)|receives action to trigger state change|
+|store.subscribe(listener)|these function are called when state changes|
