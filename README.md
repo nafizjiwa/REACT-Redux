@@ -113,6 +113,8 @@ the UI reads the new state to display the new values.
 
 |REVIEW|NOTES|
 |----:|:---|
+|Redux| library to manage state|
+|All state| stored in a single object the STORE|
 |REDUX Store [An Object]|Manages State|
 |It recieves an Action Objects|--> Executes state changes|
 |The state changes based on: |Action Type|
