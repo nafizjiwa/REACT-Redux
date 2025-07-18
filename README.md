@@ -1,4 +1,4 @@
-# REACT-Redux
+# REDUX CORE CONCEPT
 - Library to manage and update state through the STORE OBJECT.
 - The state object (initialState) and the state management logic (stateReducer)
 - Actions trigger the reducer function and then change state
