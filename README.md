@@ -1,12 +1,24 @@
 # REDUX CORE CONCEPT
-- Library to manage and update state through the STORE OBJECT.
+- Redux, a Library to manage state with tools to update state through the STORE.
 - The state object (initialState) and the state management logic (stateReducer)
 - Actions trigger the reducer function and then change state
-- A dispatched Action --> Describes what to change
+#### Apps have 3 parts
+- State - apps current data
+- View - for user
+- Actions - events to change state
+#### In React Components, these part overlap. Render and mange state
 
+#### Redux separates all 3
+A views components request state changes using actions
 ### **1. STATE Defined
-      const initialState = [ 'Take Five', 'Claire de Lune', 'Respect' ];
+- set of current data needed by or describes an application
+- State values - any js type: string, boolean, array, object;
+      const initialApplicationState = [ 'array', 'of', 'Strings', 'Values' ];
 ### **2. 'ACTIONS' ARE JS OBJECTS they TRIGGER A STATE CHANGE 
+- Actions are events with info about how to be updated state
+- How redux manages and updates states
+- Dispatched Actions are generated
+
       const addNewSong = {
          type: 'songs/addSong',            MUST HAVE TYPE PROP
          payload: 'Halo'
