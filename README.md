@@ -10,25 +10,22 @@
 
 #### Redux separates all 3
 A views components request state changes using actions
-### **1. STATE Defined
+### **1. STATE 
 - set of current data needed by or describes an application
 - State values - any js type: string, boolean, array, object;
       const initialApplicationState = [ 'array', 'of', 'Strings', 'Values' ];
 ### **2. 'ACTIONS' ARE JS OBJECTS they TRIGGER A STATE CHANGE 
 - Actions are events with info about how to be updated state
-- How redux manages and updates states
-- Dispatched Actions are generated
+- Action trggered by UI to change state
+- Actions are dispatched to notify parts of an app.
 
-      const addNewSong = {
-         type: 'songs/addSong',            MUST HAVE TYPE PROP
-         payload: 'Halo'
+      const addNewSong = {      ACTION OBJECT NAME
+         type: 'songs/addSong',    TYPE --> DESCRIBES THE type of ACTION
+         payload: 'Halo'        PAYLOAD --> INFO ABOUT ACTION
        };
-       const removeSong = {
-         type: 'songs/removeSong',
-         payload: 'Take Five'
-       };
-       const removeAll = {
-         type: 'songs/removeAll'
+  
+       const removeAll = {    NOT ALL ACTIONS REQUIRE PAYLOAD
+         type: 'songs/removeAll'   
        }
 
 ### **3. REDUCERS Carry out the changes to the state
