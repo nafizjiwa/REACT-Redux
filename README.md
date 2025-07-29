@@ -28,8 +28,8 @@ A views components request state changes using actions
        }
 
 ### **3. REDUCERS Carry out the changes to the state
- - JS functions: They accept state and action object as arguments, and return the next state
- - They define how to convert to a new state</br>
+ - JS functions: Accept the state and action object as arguments, and returns the next state
+ - They define how to create the new state</br>
  
        const reducer =  (state = initialState , action) => {
          switch(action.type){
