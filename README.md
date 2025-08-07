@@ -28,8 +28,8 @@
       - dispatched to notify parts of an app.
 
       const action = {
-        type: 'action type', //a descriptive string that specifies the type of action being done.
-        payload: 'additional data' //an optional value that has specific info required to perform the operation
+        type: 'action type', //a string that specifies the type of action being done.
+        payload: 'additional data' //an optional value with info required to perform the operation
       };
 
 
