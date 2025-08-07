@@ -104,8 +104,8 @@ Pure functions always have the same outputs given the same inputs.</br>
             export default App;
 ### **4. STORE (single source of truth)
 
-      - Contains the reducer and state, it provides a way to dispatch actions, and it calls the reducer when actions are dispatched.</br>
-      - An action is dispatched to the store which calls the reducer with the action and current state.</br>
+      - Contains the reducer and state, it provides a way to dispatch actions,
+      - An action is dispatched to the store which calls the reducer 9it needs the action and current state).
       
 #### DESCRIBE THE ONE-WAY DATA FLOW BETWEEN STATE, ACTIONS, AND REDUCERS
       = from state to view to action back to state
