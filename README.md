@@ -1,36 +1,44 @@
 # REDUX CORE CONCEPT
-- Redux, a Library to manage state with tools to update state through the STORE.
+- Redux, is a Library to manage state with tools to update state through the STORE.
 - The state object (initialState) and the state management logic (stateReducer)
 - Actions trigger the reducer function and then change state
 #### Apps have 3 parts
-- State - apps current data
-- View - for user
-- Actions - events to change state
+- State - holds apps current data
+- View - displays state to user
+- Actions - events to change the state
 
       Store → View → Actions → Store → View👏
       
       The store informs the view, user interactions trigger actions, actions are
       processed by reducers to update the store, and the updated store triggers
       the view to reflect the changes in the user interface.
-#### In React Components, these part overlap. Render and mange state
+#### In React, these part overlap. Components Render interface and Mange state
 
 #### Redux separates all 3
-A views components request state changes using actions
-### **1. STATE - SET OF DATA NEEDED BY OR DESCRIBES AN APPLICATION
+- A views component requests a state change using an action</br>
+
+### **1. STATE - SET OF DATA NEEDED BY OR IT DESCRIBES AN APPLICATION
 - State values - any js type: string, boolean, array, object;
 
-      const initialApplicationState = [ 'array', 'of', 'Strings', 'Values' ];
+      const initialApplicationState = [ 'array', 'of', 'String', 'Values' ];
 ### **2. 'ACTIONS' ARE JS OBJECTS they TRIGGER A STATE CHANGE 
-- Actions are events with info about how to update state
-- Action trggered by UI to change state
-- Actions are dispatched to notify parts of an app.
+- Actions are
+      - events with info about how to update state
+      - triggered by UI to change state
+      - dispatched to notify parts of an app.
 
-      const addNewSong = {      ACTION OBJECT NAME
+      const action = {
+        type: 'action type', //a descriptive string that specifies the type of action being done.
+        payload: 'additional data' //an optional value that has specific info required to perform the operation
+      };
+
+
+      const addNewSong = {      ACTION OBJECT NAME: 'addNewSong'
          type: 'songs/addSong',    TYPE --> DESCRIBES THE type of ACTION
          payload: 'Halo'        PAYLOAD --> INFO ABOUT ACTION
        };
   
-       const removeAll = {    NOT ALL ACTIONS REQUIRE PAYLOAD
+       const removeAll = {    AN ACTION WITH NO PAYLOAD
          type: 'songs/removeAll'   
        }
 
