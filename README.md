@@ -15,7 +15,7 @@ A views components request state changes using actions
 
       const initialApplicationState = [ 'array', 'of', 'Strings', 'Values' ];
 ### **2. 'ACTIONS' ARE JS OBJECTS they TRIGGER A STATE CHANGE 
-- Actions are events with info about how to be updated state
+- Actions are events with info about how to update state
 - Action trggered by UI to change state
 - Actions are dispatched to notify parts of an app.
 
