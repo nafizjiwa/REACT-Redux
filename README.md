@@ -6,6 +6,10 @@
 - State - apps current data
 - View - for user
 - Actions - events to change state
+
+Store → View → Actions → Store → View👏
+
+The store informs the view, user interactions trigger actions, actions are processed by reducers to update the store, and the updated store triggers the view to reflect the changes in the user interface.
 #### In React Components, these part overlap. Render and mange state
 
 #### Redux separates all 3
