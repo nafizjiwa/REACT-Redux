@@ -12,6 +12,7 @@
 A views components request state changes using actions
 ### **1. STATE - SET OF DATA NEEDED BY OR DESCRIBES AN APPLICATION
 - State values - any js type: string, boolean, array, object;
+
       const initialApplicationState = [ 'array', 'of', 'Strings', 'Values' ];
 ### **2. 'ACTIONS' ARE JS OBJECTS they TRIGGER A STATE CHANGE 
 - Actions are events with info about how to be updated state
