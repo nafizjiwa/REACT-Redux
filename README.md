@@ -21,17 +21,17 @@
 - State values - any js type: string, boolean, array, object;
 
       const initialApplicationState = [ 'array', 'of', 'String', 'Values' ];
-### **2. 'ACTIONS' ARE JS OBJECTS they TRIGGER A STATE CHANGE 
+### **2. 'ACTIONS' ARE JS OBJECTS THEY ARE REQUESTS TO CHANGE THE STATE 
 - Actions are
       - events with info about how to update state
       - triggered by UI to change state
       - dispatched to notify parts of an app.
-
-      const action = {
+ #### Action Syntax
+      const action = {   
         type: 'action type', //a string that specifies the type of action being done.
-        payload: 'additional data' //an optional value with info required to perform the operation
+        payload: 'additional data' //'Optional value' Contains info pn how to perform the operation
       };
-
+--------
 
       const addNewSong = {      ACTION OBJECT NAME: 'addNewSong'
          type: 'songs/addSong',    TYPE --> DESCRIBES THE type of ACTION
@@ -42,9 +42,8 @@
          type: 'songs/removeAll'   
        }
 
-### **3. REDUCERS Carry out the changes to the state
- - JS functions: Accept the state and action object as arguments, and returns the next state
- - They define how to create the new state</br>
+### **3. REDUCERS DEFINE HOW TO CHANGE THE STATE
+ - Are JS functions: Accept the state and action object as arguments, and returns the next state
  
        const reducer =  (state = initialState , action) => {
          switch(action.type){
@@ -63,12 +62,7 @@ Reducer functions make immutable changes to state by creating a copy and modifin
 Pure functions always have the same outputs given the same inputs.</br>
  `Redux manages and upates state with redux Actions`</br>
  'Actions describe an occuring event and provide info about what needs to be updated in state'</br>
- ### **Actions Syntax
  
-     const actionIsAnObject = {
-         type: 'actionTypeAsAString', //What are we doing -type of action
-         payload: 'addtional info about how to perform the action' // How are we doing it
-       }   
  ### **Immutable Updates and Pure Functions
  #### Immutable - No changes to original argument
  #### Pure Functions - Return the same outputs given the same inputs
