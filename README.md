@@ -44,6 +44,16 @@
 
 ### **3. REDUCERS DEFINE HOW TO CHANGE THE STATE
  - Are JS functions: Accept the state and action object as arguments, and returns the next state
+
+      --SYNTAX--
+      const appReducer = (state = initialState, action) => {
+              switch (action.type) {
+                default: {
+                  return state;
+                     }
+                  }
+            }
+
  
        const reducer =  (state = initialState , action) => {
          switch(action.type){
