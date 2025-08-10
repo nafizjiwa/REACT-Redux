@@ -115,16 +115,16 @@ Reducer functions make immutable changes to state by creating a copy and modifin
       
 #### THE ONE-WAY DATA FLOW BETWEEN STATE, ACTIONS, AND REDUCERS
       `state to view to action back to state`
-`1.` The `STORE` initializes` the state with a default value.</br>
-`2.` The `VIEW displays` that state to the user.</br>
-`3.` The `USER INTERACTS` WITH THE VIEW, such as clicking a button, an ACTION DISPATCHED to the store.`</br>
-`4.` The `STORE'S REDUCER combines` dispatched action + current state for `THE NEXT STATE.`</br>
-`5.` The `VIEW IS UPDATED` to display the new state to the user.`</br>
+1. The `STORE` initializes` the state with a default value. </br>
+2. The `VIEW displays` that state to the user. </br>
+3. The `USER INTERACTS` WITH THE VIEW, such as clicking a button, an ACTION DISPATCHED to the store. </br>
+4. The `STORE'S REDUCER combines` dispatched action + current state for `THE NEXT STATE.` </br>
+5. The `VIEW IS UPDATED` to display the new state to the user.` </br>
 
-      - User interacts with UI
-      - Actions are dispatched in response to a user interaction like a click.
-      - The store runs the reducer function to calculate a new state.
-      - The UI reads the new state to display the new values.
+       User interacts with UI
+       Actions are dispatched in response to a user interaction like a click.
+       The store runs the reducer function to calculate a new state.
+       The UI reads the new state to display the new values.
 
 |REVIEW|NOTES|
 |----:|:---|
