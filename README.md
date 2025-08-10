@@ -129,14 +129,16 @@ Reducer functions make immutable changes to state by creating a copy and modifin
 |REVIEW|NOTES|
 |----:|:---|
 |Redux| library to manage state|
-|All states| stored in a single object the STORE|
-|REDUX Store [An Object]|Manages State|
-|It recieves an Action Objects|--> Executes state changes|
+||Data flows one way|
+|| state consolidated into a single object -STORE-|
+|Action|an object that describes an event|
+||Have 2 properties: 1. type ,2. payload|
+|STORE Recieves an Action Objects|--> Executes change in state|
 |The state changes based on: |Action Type|
 |When change occurs the store calls listener function||
 |REDUCERS|Handle actions and update state/data for its slice|
 |To create a STORE object Redux uses:| createStore( )|
-|createStore(accepts reducer function)| --> Store Object|
+|createStore(accepts reducer function)| --> CREATES a Store Object|
 |Store Object has 3 methods||
 |store.getState( )|retrieves current state|
 |store.dipatch(action)|receives action to trigger state change|
