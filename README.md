@@ -43,18 +43,18 @@
        }
 
 ### **3. REDUCERS DEFINE HOW TO CHANGE THE STATE
- - Are JS functions: Accept the state and action object as arguments, and returns the next state
+ - Are JS functions: Accept the state and action object as arguments, and returns the next state</br>
 
-      --SYNTAX--
-      const appReducer = (state = initialState, action) => {
-              switch (action.type) {
-                default: {
-                  return state;
-                     }
+            --SYNTAX--
+            const appReducer = (state = initialState, action) => {
+                    switch (action.type) {
+                      default: {
+                        return state;
+                           }
+                        }
                   }
-            }
 
- 
+ ----
        const reducer =  (state = initialState , action) => {
          switch(action.type){
            case 'songs/addSong': {
@@ -69,9 +69,8 @@
          }
        }
 Reducer functions make immutable changes to state by creating a copy and modifing that copy.</br>
-Pure functions always have the same outputs given the same inputs.</br>
- `Redux manages and upates state with redux Actions`</br>
- 'Actions describe an occuring event and provide info about what needs to be updated in state'</br>
+`Redux` manages and upates `state` with redux Actions`</br>
+'Actions` describe an occuring event and provide info about what state needs updating</br>
  
  ### **3. REDUCERS DO IMMUTABLE UPDATES and THEY ARE PURE FUNCTIONS
  ##### Immutable - When a functions doesn't change the original argument but makes a copy
@@ -107,10 +106,12 @@ Pure functions always have the same outputs given the same inputs.</br>
               }
             -----------------------------------------------------------------
              
-### **4. STORE (single source of truth)
-
-      - Contains the reducer and state, it provides a way to dispatch actions,
-      - An action is dispatched to the store which calls the reducer 9it needs the action and current state).
+### **4. STORE (single source of truth `object`
+- A container for state
+- Dispatches actions
+- Triggers the reducer to react to actions
+- Actions are dispatched to the store which calls the reducer
+- Reducers require an action and current state.
       
 #### DESCRIBE THE ONE-WAY DATA FLOW BETWEEN STATE, ACTIONS, AND REDUCERS
       = from state to view to action back to state
