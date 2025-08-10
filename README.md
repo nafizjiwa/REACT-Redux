@@ -73,53 +73,40 @@ Pure functions always have the same outputs given the same inputs.</br>
  `Redux manages and upates state with redux Actions`</br>
  'Actions describe an occuring event and provide info about what needs to be updated in state'</br>
  
- ### **Immutable Updates and Pure Functions
- #### Immutable - No changes to original argument
- #### Pure Functions - Return the same outputs given the same inputs
+ ### **3. REDUCERS DO IMMUTABLE UPDATES and THEY ARE PURE FUNCTIONS
+ ##### Immutable - When a functions doesn't change the original argument but makes a copy
+ ##### Pure Functions - Return the same outputs when given the same inputs
             -------------------------------------------------------------
             import React from 'react';
             //Modify mutable function to immutable
-            // export const removeItemAtIndex = (list, index) => {
-                  //  list.splice(index, 1);   //MUTABLE
-                  //  return list; 
-            // };
+            export const removeItemAtIndex = (list, index) => {
+                  list.splice(index, 1);   //MUTABLE
+                    return list;             //because splice changes the array
+            };
             export const removeItemAtIndex = (list, index) => {
               return [
                  ...list.slice(0, index),          //IMMUTABLE
-                ...list.slice(index + 1, list.length)
+                ...list.slice(index + 1, list.length) //because slice creates a copy
               ]; 
             };
             --------------------------------------------------------------
             //Modify impure function to Pure Function
-            // export const generateUniqueId = () => {
-            //         const timestamp = Date.now();
-            //         const random = Math.floor(Math.random() * 1000);
-            //   return timestamp + random;
-            // };
-            //Make function Pure by removing function outside
+            export const generateUniqueId = () => {
+                    const timestamp = Date.now();
+                     const random = Math.floor(Math.random() * 1000);
+              return timestamp + random;
+             };
+            //Make function Pure by removing functions so they are outside
             export const generateUniqueId = (timestamp, random) => {
-              return timestamp + random;      //PURE FUNCTION
+              return timestamp + random;      //becomes PURE FUNCTION
             };
             const App = () => {
-              const result = removeItemAtIndex(['a', 'b', 'c', 'd'], 1);
-              //Make function calls here
-              const timestamp = Date.now();
-              const random = Math.floor(Math.random() * 1000);
-              //Then call pure funciton hence output same everytime input is same
+              //Pure funciton hence output same output everytime input is same
               const uniqueId = generateUniqueId(timestamp, random);
+                    return ( some code );
+              }
             -----------------------------------------------------------------
-              //Don't touch the content below this!
-              return (
-                <div>
-                  <h1>Remove Item at Index</h1>
-                  <p>Output: {result.join(', ')}</p>
-                  <h1>Unique ID:</h1>
-                  <p>Output: {uniqueId}</p>
-                </div>
-              );
-            };
-            
-            export default App;
+             
 ### **4. STORE (single source of truth)
 
       - Contains the reducer and state, it provides a way to dispatch actions,
