@@ -121,22 +121,23 @@ Reducer functions make immutable changes to state by creating a copy and modifin
 4. The `STORE'S REDUCER combines` dispatched action + current state for `THE NEXT STATE.` </br>
 5. The `VIEW IS UPDATED` to display the new state to the user.` </br>
 
-       User interacts with UI
-       Actions are dispatched in response to a user interaction like a click.
-       The store runs the reducer function to calculate a new state.
-       The UI reads the new state to display the new values.
+       * User interacts with UI
+       * Actions are dispatched in response to a user interaction like a click.
+       * The store runs the reducer function to calculate a new state.
+       * The UI reads the new state to display the new values.
 
 |REVIEW|NOTES|
 |----:|:---|
 |Redux| library to manage state|
 ||Data flows one way|
-|| state consolidated into a single object -STORE-|
+|| state consolidated into a single object -STORE/container-|
 |Action|an object that describes an event|
-||Have 2 properties: 1. type ,2. payload|
+||Has 2 properties: 1. type ,2. payload|
 |STORE Recieves an Action Objects|--> Executes change in state|
 |The state changes based on: |Action Type|
 |When change occurs the store calls listener function||
-|REDUCERS|Handle actions and update state/data for its slice|
+|REDUCERS|determines applications next state|
+||Handle actions and update state/data for its slice|
 |To create a STORE object Redux uses:| createStore( )|
 |createStore(accepts reducer function)| --> CREATES a Store Object|
 |Store Object has 3 methods||
