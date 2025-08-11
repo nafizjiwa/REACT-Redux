@@ -137,7 +137,8 @@ Reducer functions make immutable changes to state by creating a copy and modifin
 |The state changes based on: |Action Type|
 |When change occurs the store calls listener function||
 |REDUCERS|determines applications next state|
-||Handle actions and update state/data for its slice|
+||Handle actions and update state/data for its slice
+|ADDITIONAL REVIEW NOTES|
 |To create a STORE object Redux uses:| createStore( )|
 |createStore(accepts reducer function)| --> CREATES a Store Object|
 |Store Object has 3 methods||
