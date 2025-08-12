@@ -1,4 +1,4 @@
-# REDUX CORE CONCEPT
+# REDUX CORE CONCEPTS
 - Redux, is a Library to manage state with tools to update state through the STORE.
 - The state object (initialState) and the state management logic (stateReducer)
 - Actions trigger the reducer function and then change state
